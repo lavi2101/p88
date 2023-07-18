@@ -27,7 +27,7 @@ canvas.addEventListener("mousemove", my_mousemove)
 function my_mousemove(e) {
     /*Retire a linha de comentário errada*/
     currentPositionOfMouseX = e.clientX - canvas.offsetLeft;
-    currentPositionOfMouseX = e.clientX - canvas.offsetRight;
+    currentPositionOfMouseY = e.clientY - canvas.offsetTop;
 
     /*
     crie currentPositionOfMouseY and
@@ -49,20 +49,18 @@ function my_mousemove(e) {
 
 canvas.addEventListener("mouseup",my_mouseup)
 
-//Crie uma função chamada my_mouseup com o evento como parâmetro.
- 
-//Atribua "mouseUP" ao mouseEvent
-//dentro da função
-
-function my_mouseup(e)
-  
+function my_mouseup(e){
+mouseEvent = "mouseup";
+}
 
 //*Crie uma event listener para "mouseleave"
 //e chame a função my_mouseleave
 canvas.addEventListener("mouseleave",my_mouseleave)
 
 //Crie uma função chamada my_mouseleave com event de parâmetro.
- function my_mouseleave(e)
+ function my_mouseleave(e){
+    mouseEvent="mouseLeave";
+ }
 //Atribua "mouseleave" ao mouseEvent
 //dentro da função
 
